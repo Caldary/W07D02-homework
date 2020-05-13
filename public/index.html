@@ -18,7 +18,7 @@
             <select>
             <option placeholder="desired currency" v-for="rate in currency.rates" value=>{{ rate }}</option>
             </select>
-            <button>Convert</button>
+            <button v-on:click="exchangeCurrency">Convert</button>
         </form>
     </div>
 </body>
