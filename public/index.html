@@ -9,7 +9,17 @@
 </head>
 <body>
     <div id="app"> 
-        <h1>{{ currency.base }}</h1>
+        <h1>Currency Exchange</h1>
+        <form>
+            <label>Convert</label>
+            <input placeholder="Euros" type="number" v-model="euro">
+            <br>
+            <label>Into</label>
+            <select>
+            <option placeholder="desired currency" v-for="rate in currency.rates" value=>{{ rate }}</option>
+            </select>
+            <button>Convert</button>
+        </form>
     </div>
 </body>
 </html>
